@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Ratings✨</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="/assert/31.png" rel="shortcut icon" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="img1">
+      <img src="/assert/31.png" alt="" class="img2" />
+    </div>
+    <div class="wrapper">
+      <div class="alert">
+        Thank you for your feedback. It helps us to grow and improve🎉
+      </div>
+      <h3 class="alert1">We highly appreciate your feedback💯</h3>
+      <form action="" id="ratingform">
+        <div class="rating">
+          <input type="number" name="rating" hidden />
+          <i class="bx bx-star star" style="--i: 0;"></i>
+          <i class="bx bx-star star" style="--i: 1;"></i>
+          <i class="bx bx-star star" style="--i: 2;"></i>
+          <i class="bx bx-star star" style="--i: 3;"></i>
+          <i class="bx bx-star star" style="--i: 4;"></i>
+        </div>
+        <textarea
+          class="txt1"
+          name="opinion"
+          cols="30"
+          rows="1"
+          placeholder="Your Name"
+        ></textarea>
+        <textarea
+          class="txt"
+          name="opinion"
+          cols="10"
+          rows="5"
+          placeholder="Your opinion..."
+        ></textarea>
+        <div class="btn-group">
+          <button type="submit" class="btn submit">Submit</button>
+          <button class="btn cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

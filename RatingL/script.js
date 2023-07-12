@@ -38,6 +38,13 @@ firebase.initializeApp(firebaseConfig);
 
 // reference your database
 var contactFormDB = firebase.database().ref("ratingform");
+// var starCountRef = firebase.database().ref("ratingform");
+// starCountRef.on("value", function(snapshot) {
+//   snapshot.forEach(function(childsnap) {
+//     var datab = childsnap.val();
+//     console.log(datab);
+//   });
+// });
 
 document.getElementById("ratingform").addEventListener("submit", submitForm);
 
@@ -49,7 +56,6 @@ function submitForm(e) {
   var User = userVal1.value;
 
   saveMessages(feedback, star, User);
-
 
   document.querySelector(".alert").style.display = "block";
   document.querySelector(".alert1").style.display = "none";
@@ -74,4 +80,3 @@ const saveMessages = (feedback, star, User) => {
     USER_NAME: User,
   });
 };
-

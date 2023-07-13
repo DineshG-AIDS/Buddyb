@@ -88,3 +88,21 @@ const saveMessages = (feedback, star, User) => {
     USER_NAME: User,
   });
 };
+// Get a database reference to our posts
+// const db = getDatabase();
+var contactFormDB = firebase.database().ref("ratingform/");
+
+contactFormDB.on(
+  "value",
+  (snapshot) => {
+    snapshot.forEach(function(e) {
+      score = ratingform.val();
+      name1 = score[" FEED_BACK"];
+      console.log(snapshot.val());
+      console.log(name1);
+    });
+  },
+  (errorObject) => {
+    console.log("The read failed: " + errorObject.name);
+  }
+);
